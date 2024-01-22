@@ -1,0 +1,91 @@
+<!-- <div class="container card">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h3 class="text-center">Đăng nhập</h3>
+        <div class="mb-3">
+            <h5 for="" class="form-label">Tên đăng nhập</h5>
+            <input type="" class="form-control" id="" aria-describedby="" formControlName="username">
+            <div
+                *ngIf="!loginForm.controls.username?.valid&&(loginForm.controls.username?.dirty||loginForm.controls.username?.touched)">
+                <pre>Tên đăng nhập không được để trống</pre>
+            </div>
+        </div>
+        <div class="mb-3">
+            <h5 for="exampleInputPassword1" class="form-label">Mật khẩu</h5>
+            <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+            <div
+                *ngIf="!loginForm.controls.password?.valid&&(loginForm.controls.password.dirty||loginForm.controls.password?.touched)">
+                <pre>Mật khẩu không nhỏ hơn 6 ký tự</pre>
+            </div>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Lưu mật khẩu</label>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="submit">Đăng nhập</button>
+        </div>
+        <div class="mess">
+            {{mess}}
+        </div>
+    </form>
+</div> -->
+
+
+<main class="main">
+    <div class="main-form-login">
+        <form class="form-login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h4 class="form-title">Đăng nhập</h4>
+            <div class="form-login-group">
+                <label for="#" class="form-label"><i class="fas fa-user"></i> Tài khoản</label>
+                <input type="text" name="" class="form-login-input" placeholder="Username" formControlName="username" />
+                <div
+                    *ngIf="!loginForm.controls.username?.valid&&(loginForm.controls.username?.dirty||loginForm.controls.username?.touched)">
+                    <pre>Tên đăng nhập không được để trống</pre>
+                </div>
+            </div>
+            <div class="form-login-group">
+                <label for="#" class="form-label"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" name="" class="form-login-input" placeholder="Password"
+                    formControlName="password" />
+                <div
+                    *ngIf="!loginForm.controls.password?.valid&&(loginForm.controls.password.dirty||loginForm.controls.password?.touched)">
+                    <pre>Mật khẩu không nhỏ hơn 6 ký tự</pre>
+                </div>
+            </div>
+            <div class="form-login-group">
+                <label for="#" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" name="" class="form-login-input" placeholder="Email" formControlName="email" />
+                <div
+                    *ngIf="!loginForm.controls.email?.valid&&(loginForm.controls.email.dirty||loginForm.controls.email?.touched)">
+                    <pre>Email chưa đúng định dạng</pre>
+                </div>
+            </div>
+            <div class="form-login-group">
+                <label for="#" class="form-label"><i class="fas fa-phone"></i> Số điện thoại</label>
+                <input type="numer" name="" class="form-login-input" placeholder="Phone" formControlName="phone" />
+                <div
+                    *ngIf="!loginForm.controls.phone?.valid&&(loginForm.controls.phone.dirty||loginForm.controls.phone?.touched)">
+                    <pre>Số điện thoại không được để trống</pre>
+                </div>
+            </div>
+            <div class="form-control-group">
+                <div class="form-control-remember">
+                    <input type="checkbox" name="" class="form-control-checkbox" id="form-checkbox" />
+                    <label for="form-checkbox" class="form-control-label">Ghi nhớ tài khoản</label>
+                </div>
+                <a href="#" class="form-control-repass">Quên mật khẩu ?</a>
+            </div>
+
+            <div class="form-login-group">
+                <button type="submit" class="form-login-btn">Đăng nhập</button>
+            </div>
+            <div class="form-singup">
+                <span class="form-signup-text">Bạn chưa có tài khoản? <a href="register">Đăng
+                        ký</a></span>
+            </div>
+            <div class="mess">
+                {{mess}}
+            </div>
+        </form>
+    </div>
+</main>

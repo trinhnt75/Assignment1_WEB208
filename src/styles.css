@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Pattaya";
+    src: url(./Font/Pattaya/Pattaya-Regular.ttf);
+}
+
+.flex-fill{
+    display: block;
+    justify-content: end;
+}
+
+.h2{
+    font-family: "Pattaya";
+}
+
+.h2:hover{
+    color: red;
+}
+
+.nav-link{
+    font-family: "Pattaya";
+}
+
+.card-img-top:hover{
+    transform: scale(0.9) rotate(5deg);
+    transition: 1s;
+}
+
+.anh{
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.anh:hover{
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.text-light{
+    text-align: center;
+}
+

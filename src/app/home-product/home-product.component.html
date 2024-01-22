@@ -1,0 +1,22 @@
+<div class="row">
+    <div *ngFor="let product of products" class="col-md-3">
+        <div class="card mb-4 product-wap rounded-0">
+            <div class="card rounded-0">
+                <img class="card-img rounded-0 img-fluid" src="{{product.thumbnail}}">
+            </div>
+            <div class="card-body">
+                <a href="/product-detail/{{product.id}}" class="h3 text-decoration-none"><b>{{product.title}}</b></a>
+                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                    <li>{{product.price}}</li>
+                </ul>
+                <div class="d-grid gap-2">
+                    <button class="sales btn btn-primary" *ngIf="product.sale; else notsale">Mua với mã giảm
+                        giá</button>
+                    <ng-template #notsale>
+                        <button class="btn btn-primary">Mua ngay</button>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
